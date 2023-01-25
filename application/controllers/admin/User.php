@@ -14,7 +14,7 @@ class User extends CI_Controller {
             'user' => $this->User_model->getAll(),
             'content'=> 'admin/user/index'
         );
-        $this->load->view('admin/template/main',$data);
+        $this->load->view('admin/template_user/main',$data);
     }
     public function add()
     {
@@ -22,7 +22,7 @@ class User extends CI_Controller {
             'title' => 'Tambah Data User',
             'content'=> 'admin/user/add_form'
         );
-        $this->load->view('admin/template/main',$data);
+        $this->load->view('admin/template_user/main',$data);
     }
     public function save()
     {
@@ -39,7 +39,7 @@ class User extends CI_Controller {
             'user' => $this->User_model->getById($id),
             'content'=> 'admin/user/edit_form'
         );
-        $this->load->view('admin/template/main',$data);
+        $this->load->view('admin/template_user/main',$data);
     }
     public function edit()
     {
